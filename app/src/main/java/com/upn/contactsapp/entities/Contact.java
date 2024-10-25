@@ -7,6 +7,7 @@ import androidx.room.PrimaryKey;
 import com.upn.contactsapp.IService;
 
 @Entity(tableName = "contacts")
+
 public class Contact {
 
     @PrimaryKey(autoGenerate = true)
@@ -23,9 +24,13 @@ public class Contact {
 
     @ColumnInfo(name = "image_path")
     public String imagePath;
+    public String uuid;
 
     public Contact(String name, String phone) {
         this.name = name;
         this.phone = phone;
+    }
+
+    public Contact() {
     }
 }
