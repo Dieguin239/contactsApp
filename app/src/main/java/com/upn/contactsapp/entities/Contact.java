@@ -22,6 +22,7 @@ public class Contact {
     public String phone;
     public String image;
 
+
     @ColumnInfo(name = "image_path")
     public String imagePath;
 

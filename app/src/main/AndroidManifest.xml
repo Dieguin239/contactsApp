@@ -6,11 +6,6 @@
         android:name="android.hardware.camera"
         android:required="false" />
 
-<!--    <uses-permission android:name="android.permission.INTERNET" />-->
-<!--    <uses-permission android:name="android.permission.CAMERA" />-->
-<!--    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
-<!--    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
-
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -21,33 +16,29 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ContactsApp"
         tools:targetApi="31">
+
+        <activity
+            android:name=".activities.ListadoApi10"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
         <activity
             android:name=".FirebaseActivity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activities.CrearComentarioActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".activities.IssueActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="true" />
-        <!--
-             TODO: Before you run your application, you need a Google Maps API key.
 
-             To get one, follow the directions here:
-
-                https://developers.google.com/maps/documentation/android-sdk/get-api-key
-
-             Once you have your API key (it starts with "AIza"), define a new property in your
-             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
-             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
-        -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDBucxkwLojpO8NhaJQL0DamwP4vff3mhk" />
@@ -61,13 +52,6 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false" />
     </application>
-
 </manifest>

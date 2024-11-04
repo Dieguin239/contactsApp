@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace 'com.upn.contactsapp'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.upn.contactsapp"
